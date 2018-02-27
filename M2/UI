@@ -1,0 +1,16 @@
+UI компоненты базово определены в каталоге:
+vendor/magento/module-ui/view/base/ui_component/etc/definition
+
+Поиск UI компонентов осуществляется в каталогах:
+<your module root dir>/<vendor>/<module>/view/<area>/ui_component/etc/definition.xml
+
+Все конкретные обьекты компонентов находятся в каталогах
+<your module root dir>/<vendor>/<module>/view/<area>/ui_component/<component_instance_name>.xml
+
+XSD file содержит правила и ограничения, качающиеся всех компонентов (both definitions and instance configurations):
+<your module root dir>/Magento/Ui/etc/ui_definition.xsd
+
+You can configure existing component and all filter types in the following ways:
+    Globally: using any module’s view/*/ui_component/etc/definition.xml file. All settings declared in this file will be applied to all component’s instances
+    Locally: using concrete component instance configuration, such as <your module root dir>/Magento/Cms/view/adminhtml/ui_component/cms_page_listing.xml
+
