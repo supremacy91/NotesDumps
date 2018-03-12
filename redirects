@@ -1,0 +1,25 @@
+https://devaka.ru/articles/redirect-301
+
+-----------------------------------------------------------------------------------------------------------------------------
+
+Редирект с помощью директивы Redirect или RedirectPermanent модуля mod_alias
+
+Redirect 301 /old-page.html http://new-domain.ru/new-page.html
+или
+Redirect permanent /old-page.html http://new-domain.ru/new-page.html
+
+-----------------------------------------------------------------------------------------------------------------------------
+
+Редирект с помощью директивы RewriteRule модуля mod_rewrite
+
+Перенаправление домена с www на не-www
+Options +FollowSymLinks
+RewriteEngine On
+RewriteCond %{HTTP_HOST} ^www.(.*) [NC]
+RewriteRule ^(.*)$ http://%1/$1	[R=301,L]     // $1 - значение с регулярки; %1 - значение с HTTP_HOST
+
+-----------------------------------------------------------------------------------------------------------------------------
+
+
+
+

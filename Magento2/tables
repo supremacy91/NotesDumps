@@ -1,0 +1,20 @@
+setup_module - хранит список установленных модулей. Модульи сюда попадают после запуска команды php bin/magento setup:upgrade 
+
+store_website - список вебсайтов
+store_group - список магазинов
+store - список store view
+
+indexer_state - список индексеров
+
+Таблицы индексов:
+    Design Config Grid ( name: design_config_grid )
+    Customer Grid ( name : customer_grid )
+    Category products ( name: catalog_category_product )
+    Product categories ( name: catalog_product_category)
+    Product price ( name: catalog_product_price)
+    Product entity attribute value ( name: catalog_product_attribute)
+    Catalog search ( name: catalogsearch_fulltext)
+    Stock ( name: cataloginventory_stock)
+    Catalog rule product ( name: catalogrule_rule)
+    Catalog product rule ( name: catalogrule_product)
+
